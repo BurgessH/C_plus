@@ -25,6 +25,33 @@ private:
 };
 
 
+
+
+void led_blink(void)
+{
+    static  uint8_t status = 0;
+    if(status == 0)
+    {
+        printf("LED_ON!\n");
+        status = 1;
+    }
+    else
+    {
+        printf("LED_OFF!\n");
+        status = 0;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
 int main(void)
 {
     cout << "Hello World!" << endl;
@@ -37,11 +64,10 @@ int main(void)
         cout<<d.year<<" is leap year"<<endl;
     else
         cout<<d.year<<" is not leap year"<<endl;
+
 #endif
 
-    Date_type m;
-    m.init();
-    m.print();
+
 
 
 
